@@ -14,16 +14,19 @@ public class Main {
         System.out.println(birthday.plusYears(100));*/
 
         //Task2
-        /*int [] array = new int [] {1,2,-3,4,-5,6,-7,8,9};
+        int [] array = new int [] {1,2,-3,4,-5,6,-7,8,9};
         Predicate<Integer> pr = (a) -> {
-            for (int i = 0; i <array.length; i++) {
-                if (array[i] > 0){
-                    System.out.println(i);
-                }
+            if (a >= 0){
+                return true;
+            } else {
+                return false;
             }
-            return true;
         };
-        pr.test(1);*/
+        for (int i = 0; i < array.length; i++){
+            if(pr.test(array[i]) == true){
+                System.out.println(array[i]);
+            }
+        }
 
         //Task3
        /* String input = "524 BYN";
@@ -42,11 +45,11 @@ public class Main {
         cs.accept(input);*/
 
         //Task5
-        Supplier<String> sp = ()-> {
+       /* Supplier<String> sp = ()-> {
             Scanner scanner = new Scanner(System.in);
             StringBuilder stringBuilder = new StringBuilder();
             return  stringBuilder.append(scanner.nextLine()).reverse().toString();
         };
-        System.out.println(sp.get());
+        System.out.println(sp.get());*/
     }
 }
